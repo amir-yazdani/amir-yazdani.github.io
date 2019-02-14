@@ -13,7 +13,7 @@
     
     
     <item>
-      <title>Human Posture Estimation in pHRI</title>
+      <title>Human Posture Estimation in p-HRI</title>
       <link>https://amir-yazdani.github.io/project/pose_estimation/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0600</pubDate>
       
@@ -29,6 +29,15 @@
       <guid>https://amir-yazdani.github.io/project/pam/</guid>
       <description>In this project we introduce a patient assistant mobile (PAM) robot to monitor patient behavior and provide a cost-effective physical presence to continuously observe a patient and the environment to prevent falls.
 Many common objects found inside hospital rooms and personal dwellings have legs (e.g. walkers, tables, chairs, equipment stands). For a mobile robot operating in such environments, safely maneuvering these objects without collision is essential. Since providing the robot with dynamic models of all possible legged objects that may exist in such environments is not feasible, autonomous learning of an approximate dynamic model for these objects would significantly improve manipulation planning.</description>
+    </item>
+    
+    <item>
+      <title>Safe Motion Planning in Shared Autonomy</title>
+      <link>https://amir-yazdani.github.io/project/safety_hri/</link>
+      <pubDate>Sun, 27 Mar 2016 00:00:00 -0600</pubDate>
+      
+      <guid>https://amir-yazdani.github.io/project/safety_hri/</guid>
+      <description>As human and robot collaboration become more intimate, and more intelligent robots are being used in both healthcare and manufacturing environments, the safety of humans working closely with companion or co-robots is becoming a challenging issue. As a result, there is a great need for developing improved control algorithms and better guidelines to allow humans and robots to safely work together in a synergistic fashion. The nature of human variability requires the robot to be able to learn and adapt to these changes while maintaining safety in the presence of an often unpredictable human worker.</description>
     </item>
     
     <item>

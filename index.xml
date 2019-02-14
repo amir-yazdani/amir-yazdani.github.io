@@ -20,6 +20,15 @@
     </item>
     
     <item>
+      <title>Improvement of Human Safety in Fault-Tolerant Human and Robot Collaboration Using Convex Optimization and Receding Horizon Control.</title>
+      <link>https://amir-yazdani.github.io/talk/niosh2017/</link>
+      <pubDate>Wed, 21 Jun 2017 00:00:00 -0600</pubDate>
+      
+      <guid>https://amir-yazdani.github.io/talk/niosh2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>An abstract presented in NOIRS 2018 symposium</title>
       <link>https://amir-yazdani.github.io/post/noirs2018/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 -0700</pubDate>
@@ -52,10 +61,10 @@ both robotics and safety and health communities.&lt;/p&gt;
     
     <item>
       <title>Changing Perceptions of Robotics in Industry: Recent Accomplishment in Safety and Injury Risk Reduction</title>
-      <link>https://amir-yazdani.github.io/talk/example/</link>
+      <link>https://amir-yazdani.github.io/talk/noirs2018/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 -0700</pubDate>
       
-      <guid>https://amir-yazdani.github.io/talk/example/</guid>
+      <guid>https://amir-yazdani.github.io/talk/noirs2018/</guid>
       <description></description>
     </item>
     
@@ -78,7 +87,7 @@ both robotics and safety and health communities.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Human Posture Estimation in pHRI</title>
+      <title>Human Posture Estimation in p-HRI</title>
       <link>https://amir-yazdani.github.io/project/pose_estimation/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0600</pubDate>
       
@@ -100,6 +109,34 @@ In this project we propose a novel method to estimate human posture in telemanip
 &lt;p&gt;Many common objects found inside hospital rooms and personal dwellings have legs (e.g. walkers, tables, chairs, equipment stands). For a mobile robot operating in such environments, safely maneuvering these objects without collision is essential. Since providing the robot with dynamic models of all possible legged objects that may exist in such environments is not feasible, autonomous learning of an approximate dynamic model for these objects would significantly improve manipulation planning. Thus, we have developed a probabilistic algorithm that learns pre-categorized object models using minimal force and motion interactions between the robot and object.&lt;/p&gt;
 
 &lt;p&gt;We account for multiple manipulation strategies by formulating the manipulation planning as a mixed-integer convex optimization problem. The proposed manipulation framework considers the hybrid control system comprised of i) choosing which leg to grasp, and ii) continuous applied forces to move the aid.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Safe Motion Planning in Shared Autonomy</title>
+      <link>https://amir-yazdani.github.io/project/safety_hri/</link>
+      <pubDate>Sun, 27 Mar 2016 00:00:00 -0600</pubDate>
+      
+      <guid>https://amir-yazdani.github.io/project/safety_hri/</guid>
+      <description>&lt;p&gt;As human and robot collaboration become more intimate, and more intelligent robots are being used in both healthcare and manufacturing environments, the safety of humans working closely with companion or co-robots is becoming a challenging issue. As a result, there is a great need for developing improved control algorithms and better guidelines to allow humans and robots to safely work together in a synergistic fashion. The nature of human variability requires the robot to be able to learn and adapt to these changes while maintaining safety in the presence of an often unpredictable human worker.&lt;/p&gt;
+
+&lt;p&gt;In this project, we use the algorithm we developed previously for collision-free and fault-tolerant motion planniong of serial robots and we add safety features including minimum seperation distance and relative velocity of robot and the human arm. We are also adding the motion prediction of human during normal pick and place task to improve the performanc of the motion planning algorithm in respect of both the safety and the productivity.&lt;/p&gt;
+
+
+
+
+&lt;figure&gt;
+
+&lt;img src=&#34;safety_hri1.png&#34; /&gt;
+
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
+  &lt;h4&gt;The shared autonomy scenario including the fauilure in the robot&amp;rsquo;s joints.&lt;/h4&gt;
+  
+&lt;/figcaption&gt;
+
+&lt;/figure&gt;
 </description>
     </item>
     
@@ -225,41 +262,6 @@ In this project we propose a novel method to estimate human posture in telemanip
 
 &lt;/figure&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>QuattroTaar 4-DOF Parallel Robot</title>
-      <link>https://amir-yazdani.github.io/project/quattrotaar/</link>
-      <pubDate>Mon, 27 Apr 2015 00:00:00 -0600</pubDate>
-      
-      <guid>https://amir-yazdani.github.io/project/quattrotaar/</guid>
-      <description>&lt;p&gt;This project includes design, develop and kinematics analysis of QuattroTaar 3-DOF parallel robot inspired by the Quattro parallel robot.
- I designed the robot with a singularity-free workspace, developed the robot for very fast pick and place applications. The key feature of this design is how to design low friction joints. We used self-lubricant materials. Links are also made of costume made carbon-fibers to decrease the inertia and mass.
-
-
-
-&lt;figure&gt;
-
-&lt;img src=&#34;quattrotaar1.jpg&#34; /&gt;
-
-
-
-&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
-  &lt;h4&gt;CAD model of the QuattroTaar&amp;rsquo;s limb.&lt;/h4&gt;
-  
-&lt;/figcaption&gt;
-
-&lt;/figure&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Workspace Determination of Planar Parallel Robots via Progressive Growing Neural Gas Network</title>
-      <link>https://amir-yazdani.github.io/publication/icrom2014-pgngn/</link>
-      <pubDate>Tue, 09 Sep 2014 00:00:00 -0600</pubDate>
-      
-      <guid>https://amir-yazdani.github.io/publication/icrom2014-pgngn/</guid>
-      <description></description>
     </item>
     
   </channel>
