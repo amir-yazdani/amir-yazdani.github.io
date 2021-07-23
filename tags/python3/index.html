@@ -20,7 +20,7 @@
   <meta name="description" content="PhD Candidate in Robotics, Utah Robotics Center">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://amir-yazdani.github.io/tags/">
+  <link rel="alternate" hreflang="en-us" href="https://amir-yazdani.github.io/tags/python3/">
 
   
 
@@ -100,15 +100,15 @@
   
 
   
-  <link rel="alternate" href="https://amir-yazdani.github.io/tags/index.xml" type="application/rss+xml" title="Amir Yazdani">
-  <link rel="feed" href="https://amir-yazdani.github.io/tags/index.xml" type="application/rss+xml" title="Amir Yazdani">
+  <link rel="alternate" href="https://amir-yazdani.github.io/tags/python3/index.xml" type="application/rss+xml" title="Amir Yazdani">
+  <link rel="feed" href="https://amir-yazdani.github.io/tags/python3/index.xml" type="application/rss+xml" title="Amir Yazdani">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://amir-yazdani.github.io/tags/">
+  <link rel="canonical" href="https://amir-yazdani.github.io/tags/python3/">
 
   
   
@@ -122,19 +122,19 @@
   <meta property="twitter:creator" content="@amirreza_yz">
   
   <meta property="og:site_name" content="Amir Yazdani">
-  <meta property="og:url" content="https://amir-yazdani.github.io/tags/">
-  <meta property="og:title" content="Tags | Amir Yazdani">
+  <meta property="og:url" content="https://amir-yazdani.github.io/tags/python3/">
+  <meta property="og:title" content="python3 | Amir Yazdani">
   <meta property="og:description" content="PhD Candidate in Robotics, Utah Robotics Center"><meta property="og:image" content="https://amir-yazdani.github.io/img/amir-portrait.jpg">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2021-07-13T00:00:00-07:00">
+  <meta property="og:updated_time" content="2021-07-21T00:00:00-07:00">
   
 
   
 
   
 
-  <title>Tags | Amir Yazdani</title>
+  <title>python3 | Amir Yazdani</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -369,7 +369,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1 itemprop="name">Tags</h1>
+  <h1 itemprop="name">python3</h1>
 
   
 
@@ -384,86 +384,21 @@
   
   
   <div>
-    <h2><a href="/tags/hri/">HRI</a></h2>
+    <h2><a href="/post/pykdl-noetic/">Installing pykdl_utils on ROS Noetic, Ubuntu 20.04</a></h2>
     <div class="article-style">
       
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/tags/haptics/">Haptics</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/tags/motion-planning/">Motion Planning</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/tags/other/">Other</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/tags/parallel-robots/">Parallel Robots</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/tags/ros/">ROS</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/tags/kdl/">kdl</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/tags/kinetic/">kinetic</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/tags/noetic/">noetic</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/tags/openpose/">openpose</a></h2>
-    <div class="article-style">
+      1) Clone the hrl_kdl repository in your catkin-ws folder
+cd ~/catkin_ws/src/ git clone https://github.com/amir-yazdani/hrl-kdl.git  2) Checkout to the noetic-devel branch
+cd hrl-kdl git checkout noetic-devel  3) Install pykd_utils
+cd hrl-kdl/pykdl_utils python3 setup.py build sudo python3 setup.py install  3) Install hrl_geom
+cd ~/catkin_ws/src/hrl-kdl/hrl_geom/ python3 setup.py build sudo python3 setup.py install  4) Install urdf_parser and urdfdom-py
+sudo apt-get install ros-noetic-urdf-parser-plugin sudo apt-get install ros-noetic-urdfdom-py  5) Build the catkin workspace
       
     </div>
   </div>
   
 
   
-<nav>
-  <ul class="pagination justify-content-center">
-    
-    
-    <li class="page-item"><a class="page-link" href="/tags/page/2/">&raquo;</a></li>
-    
-  </ul>
-</nav>
-
 
 </div>
 <div class="container">

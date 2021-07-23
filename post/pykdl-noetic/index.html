@@ -15,12 +15,15 @@
   
     
   
-  <meta name="description" content="OpenPose has represented the first real-time multi-person system to jointly detect human body, hand, facial, and foot keypoints (in total 135 keypoints) on single images.
-The install guide on its website, it starts with dependencies that should be installed before installing openpose. &ldquo;DO NOT FOLLOW IT!&rdquo;. Instead, follow these steps:
-1) check your Nvidia driver version in additional drivers page on your ubuntu. Make sure it is one of the proprietary packages.">
+  <meta name="description" content="1) Clone the hrl_kdl repository in your catkin-ws folder
+cd ~/catkin_ws/src/ git clone https://github.com/amir-yazdani/hrl-kdl.git  2) Checkout to the noetic-devel branch
+cd hrl-kdl git checkout noetic-devel  3) Install pykd_utils
+cd hrl-kdl/pykdl_utils python3 setup.py build sudo python3 setup.py install  3) Install hrl_geom
+cd ~/catkin_ws/src/hrl-kdl/hrl_geom/ python3 setup.py build sudo python3 setup.py install  4) Install urdf_parser and urdfdom-py
+sudo apt-get install ros-noetic-urdf-parser-plugin sudo apt-get install ros-noetic-urdfdom-py  5) Build the catkin workspace">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://amir-yazdani.github.io/post/openpose/">
+  <link rel="alternate" hreflang="en-us" href="https://amir-yazdani.github.io/post/pykdl-noetic/">
 
   
 
@@ -108,7 +111,7 @@ The install guide on its website, it starts with dependencies that should be ins
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://amir-yazdani.github.io/post/openpose/">
+  <link rel="canonical" href="https://amir-yazdani.github.io/post/pykdl-noetic/">
 
   
   
@@ -122,23 +125,26 @@ The install guide on its website, it starts with dependencies that should be ins
   <meta property="twitter:creator" content="@amirreza_yz">
   
   <meta property="og:site_name" content="Amir Yazdani">
-  <meta property="og:url" content="https://amir-yazdani.github.io/post/openpose/">
-  <meta property="og:title" content="Installing openpose on Ubuntu 20.04 | Amir Yazdani">
-  <meta property="og:description" content="OpenPose has represented the first real-time multi-person system to jointly detect human body, hand, facial, and foot keypoints (in total 135 keypoints) on single images.
-The install guide on its website, it starts with dependencies that should be installed before installing openpose. &ldquo;DO NOT FOLLOW IT!&rdquo;. Instead, follow these steps:
-1) check your Nvidia driver version in additional drivers page on your ubuntu. Make sure it is one of the proprietary packages."><meta property="og:image" content="https://amir-yazdani.github.io/post/openpose/featured.png">
+  <meta property="og:url" content="https://amir-yazdani.github.io/post/pykdl-noetic/">
+  <meta property="og:title" content="Installing pykdl_utils on ROS Noetic, Ubuntu 20.04 | Amir Yazdani">
+  <meta property="og:description" content="1) Clone the hrl_kdl repository in your catkin-ws folder
+cd ~/catkin_ws/src/ git clone https://github.com/amir-yazdani/hrl-kdl.git  2) Checkout to the noetic-devel branch
+cd hrl-kdl git checkout noetic-devel  3) Install pykd_utils
+cd hrl-kdl/pykdl_utils python3 setup.py build sudo python3 setup.py install  3) Install hrl_geom
+cd ~/catkin_ws/src/hrl-kdl/hrl_geom/ python3 setup.py build sudo python3 setup.py install  4) Install urdf_parser and urdfdom-py
+sudo apt-get install ros-noetic-urdf-parser-plugin sudo apt-get install ros-noetic-urdfdom-py  5) Build the catkin workspace"><meta property="og:image" content="https://amir-yazdani.github.io/post/pykdl-noetic/featured.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2021-07-18T00:00:00-07:00">
+  <meta property="article:published_time" content="2021-07-21T00:00:00-07:00">
   
-  <meta property="article:modified_time" content="2021-07-18T00:00:00-07:00">
-  
-
+  <meta property="article:modified_time" content="2021-07-21T00:00:00-07:00">
   
 
   
 
-  <title>Installing openpose on Ubuntu 20.04 | Amir Yazdani</title>
+  
+
+  <title>Installing pykdl_utils on ROS Noetic, Ubuntu 20.04 | Amir Yazdani</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -369,7 +375,7 @@ The install guide on its website, it starts with dependencies that should be ins
 
 
 <div class="article-header d-xl-none">
-  <div class="featured-image" style="background-image: url('/post/openpose/featured_huce6cd702cf3211289bda3735e7b0f39d_181756_800x0_resize_box_2.png');"></div>
+  <div class="featured-image" style="background-image: url('/post/pykdl-noetic/featured_huaf97d5efe158a04bd5e7d76788a6dce5_70287_800x0_resize_box_2.png');"></div>
   
 </div>
 
@@ -378,7 +384,7 @@ The install guide on its website, it starts with dependencies that should be ins
   <div class="row">
     <div class="col-6">
       <div class="split-header-content">
-        <h1 itemprop="name">Installing openpose on Ubuntu 20.04</h1>
+        <h1 itemprop="name">Installing pykdl_utils on ROS Noetic, Ubuntu 20.04</h1>
 
         
 
@@ -395,9 +401,9 @@ The install guide on its website, it starts with dependencies that should be ins
 
   <span class="article-date">
     
-    <meta content="2021-07-18 00:00:00 -0700 PDT" itemprop="datePublished">
-    <time datetime="2021-07-18 00:00:00 -0700 PDT" itemprop="dateModified">
-      Jul 18, 2021
+    <meta content="2021-07-21 00:00:00 -0700 PDT" itemprop="datePublished">
+    <time datetime="2021-07-21 00:00:00 -0700 PDT" itemprop="dateModified">
+      Jul 21, 2021
     </time>
   </span>
   <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
@@ -440,35 +446,35 @@ The install guide on its website, it starts with dependencies that should be ins
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Installing%20openpose%20on%20Ubuntu%2020.04&amp;url=https%3a%2f%2famir-yazdani.github.io%2fpost%2fopenpose%2f"
+         href="https://twitter.com/intent/tweet?text=Installing%20pykdl_utils%20on%20ROS%20Noetic%2c%20Ubuntu%2020.04&amp;url=https%3a%2f%2famir-yazdani.github.io%2fpost%2fpykdl-noetic%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2famir-yazdani.github.io%2fpost%2fopenpose%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2famir-yazdani.github.io%2fpost%2fpykdl-noetic%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-facebook-f"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2famir-yazdani.github.io%2fpost%2fopenpose%2f&amp;title=Installing%20openpose%20on%20Ubuntu%2020.04"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2famir-yazdani.github.io%2fpost%2fpykdl-noetic%2f&amp;title=Installing%20pykdl_utils%20on%20ROS%20Noetic%2c%20Ubuntu%2020.04"
          target="_blank" rel="noopener">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2famir-yazdani.github.io%2fpost%2fopenpose%2f&amp;title=Installing%20openpose%20on%20Ubuntu%2020.04"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2famir-yazdani.github.io%2fpost%2fpykdl-noetic%2f&amp;title=Installing%20pykdl_utils%20on%20ROS%20Noetic%2c%20Ubuntu%2020.04"
          target="_blank" rel="noopener">
         <i class="fab fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Installing%20openpose%20on%20Ubuntu%2020.04&amp;body=https%3a%2f%2famir-yazdani.github.io%2fpost%2fopenpose%2f">
+         href="mailto:?subject=Installing%20pykdl_utils%20on%20ROS%20Noetic%2c%20Ubuntu%2020.04&amp;body=https%3a%2f%2famir-yazdani.github.io%2fpost%2fpykdl-noetic%2f">
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -480,7 +486,7 @@ The install guide on its website, it starts with dependencies that should be ins
     </div>
     <div class="col-6">
       <div class="split-header-image">
-        <img src="/post/openpose/featured_huce6cd702cf3211289bda3735e7b0f39d_181756_680x500_fill_q90_box_right_2.png" itemprop="image" alt="">
+        <img src="/post/pykdl-noetic/featured_huaf97d5efe158a04bd5e7d76788a6dce5_70287_680x500_fill_q90_box_smart1_2.png" itemprop="image" alt="">
         
       </div>
     </div>
@@ -488,7 +494,7 @@ The install guide on its website, it starts with dependencies that should be ins
 </div>
 
 <div class="article-container d-xl-none">
-  <h1 itemprop="name">Installing openpose on Ubuntu 20.04</h1>
+  <h1 itemprop="name">Installing pykdl_utils on ROS Noetic, Ubuntu 20.04</h1>
 
   
 
@@ -505,9 +511,9 @@ The install guide on its website, it starts with dependencies that should be ins
 
   <span class="article-date">
     
-    <meta content="2021-07-18 00:00:00 -0700 PDT" itemprop="datePublished">
-    <time datetime="2021-07-18 00:00:00 -0700 PDT" itemprop="dateModified">
-      Jul 18, 2021
+    <meta content="2021-07-21 00:00:00 -0700 PDT" itemprop="datePublished">
+    <time datetime="2021-07-21 00:00:00 -0700 PDT" itemprop="dateModified">
+      Jul 21, 2021
     </time>
   </span>
   <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
@@ -527,35 +533,35 @@ The install guide on its website, it starts with dependencies that should be ins
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Installing%20openpose%20on%20Ubuntu%2020.04&amp;url=https%3a%2f%2famir-yazdani.github.io%2fpost%2fopenpose%2f"
+         href="https://twitter.com/intent/tweet?text=Installing%20pykdl_utils%20on%20ROS%20Noetic%2c%20Ubuntu%2020.04&amp;url=https%3a%2f%2famir-yazdani.github.io%2fpost%2fpykdl-noetic%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2famir-yazdani.github.io%2fpost%2fopenpose%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2famir-yazdani.github.io%2fpost%2fpykdl-noetic%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-facebook-f"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2famir-yazdani.github.io%2fpost%2fopenpose%2f&amp;title=Installing%20openpose%20on%20Ubuntu%2020.04"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2famir-yazdani.github.io%2fpost%2fpykdl-noetic%2f&amp;title=Installing%20pykdl_utils%20on%20ROS%20Noetic%2c%20Ubuntu%2020.04"
          target="_blank" rel="noopener">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2famir-yazdani.github.io%2fpost%2fopenpose%2f&amp;title=Installing%20openpose%20on%20Ubuntu%2020.04"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2famir-yazdani.github.io%2fpost%2fpykdl-noetic%2f&amp;title=Installing%20pykdl_utils%20on%20ROS%20Noetic%2c%20Ubuntu%2020.04"
          target="_blank" rel="noopener">
         <i class="fab fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Installing%20openpose%20on%20Ubuntu%2020.04&amp;body=https%3a%2f%2famir-yazdani.github.io%2fpost%2fopenpose%2f">
+         href="mailto:?subject=Installing%20pykdl_utils%20on%20ROS%20Noetic%2c%20Ubuntu%2020.04&amp;body=https%3a%2f%2famir-yazdani.github.io%2fpost%2fpykdl-noetic%2f">
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -593,93 +599,42 @@ The install guide on its website, it starts with dependencies that should be ins
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      <p><a href="https://github.com/CMU-Perceptual-Computing-Lab/openpose" target="_blank">OpenPose</a> has represented the first real-time multi-person system to jointly detect human body, hand, facial, and foot keypoints (in total 135 keypoints) on single images.</p>
+      <p>1) Clone the <code>hrl_kdl</code> repository in your catkin-ws folder</p>
 
-<p>The install guide on its website, it starts with dependencies that should be installed before installing openpose. &ldquo;<strong>DO NOT FOLLOW IT!</strong>&rdquo;. Instead, follow these steps:</p>
-
-<p>1) check your Nvidia driver version in <em>additional drivers</em> page on your ubuntu. Make sure it is one of the proprietary packages.
-
-
-
-<figure>
-
-<img src="openpose1.jpg" />
-
-
-</figure>
-2) Check your CUDA version using</p>
-
-<pre><code class="language-bash">nvcc --version
+<pre><code class="language-bash">cd ~/catkin_ws/src/
+git clone https://github.com/amir-yazdani/hrl-kdl.git
 </code></pre>
 
-<p>If CUDA is not installed, install nvidia toolkit using</p>
+<p>2) Checkout to the noetic-devel branch</p>
 
-<pre><code class="language-bash">sudo apt-get install nvidia-cuda-toolkit
+<pre><code class="language-bash">cd hrl-kdl
+git checkout noetic-devel
 </code></pre>
 
-<p>and reboot.
-3) Download a version of cuDNN from <a href="https://developer.nvidia.com/rdp/cudnn-archive" target="_blank">here</a> that matches your CUDA version. Download all the .deb files for runtime and developer modes and code samples.
+<p>3) Install <code>pykd_utils</code></p>
 
-
-
-<figure>
-
-<img src="openpose2.jpg" />
-
-
-</figure>
-Install the runtime and developer ones, then install the code samples.
-4) Test if cuDNN using the mnist dataset:</p>
-
-<pre><code class="language-bash">cp -r /usr/src/cudnn_samples_v8/ $HOME
-cd  $HOME/cudnn_samples_v8/mnistCUDNN
-make clean &amp;&amp; make
-chmod +x ./mnistCUDNN
+<pre><code class="language-bash">cd hrl-kdl/pykdl_utils
+python3 setup.py build
+sudo python3 setup.py install
 </code></pre>
 
-<p>If cuDNN is properly installed and running on your Linux system, you will see a message saying test passed!</p>
+<p>3) Install <code>hrl_geom</code></p>
 
-<p>5) Install opencv</p>
-
-<pre><code class="language-bash">sudo apt install libopencv-dev python3-opencv
+<pre><code class="language-bash">cd ~/catkin_ws/src/hrl-kdl/hrl_geom/
+python3 setup.py build
+sudo python3 setup.py install
 </code></pre>
 
-<p>6) Install and configure gcc version 8 as the default using info from this <a href="https://linuxize.com/post/how-to-install-gcc-on-ubuntu-20-04/" target="_blank">link</a> . Check the gcc version and make sure it is version 8.</p>
+<p>4) Install <code>urdf_parser</code> and <code>urdfdom-py</code></p>
 
-<p>7)Now, clone openpose from the github</p>
-
-<pre><code class="language-bash">git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose
+<pre><code class="language-bash">sudo apt-get install ros-noetic-urdf-parser-plugin
+sudo apt-get install ros-noetic-urdfdom-py
 </code></pre>
 
-<p>8) Install OpenPose dependencies by running the shell script:</p>
+<p>5) Build the catkin workspace</p>
 
-<pre><code class="language-bash">cd openpose\scripts\ubuntu
-chmod +x install_deps.sh
-sudo ./install_deps.sh
-</code></pre>
-
-<p>This will install all the dependencies except caffe. caffe source code is already in openpose <code>3rdparty</code> folder. When you build openpose, caffe will be installed.</p>
-
-<p>9) Configure and make the build for OpenPose:</p>
-
-<pre><code class="language-bash">cd {OpenPose_folder}
-mkdir build/
-cd build/
-cmake-gui ..
-</code></pre>
-
-<p>select the configs you want. Make sure to check build caffe, use cuDNN and openCV. Hit &lsquo;Configure&rsquo; and then &lsquo;Generate&rsquo;. Then close cmake.</p>
-
-<p>10) Build OpenPose</p>
-
-<pre><code class="language-bash">cd build/
-make -j5
-</code></pre>
-
-<p>11) Now, you can run a demo using the following code:</p>
-
-<pre><code class="language-bash">cd ..
-./build/examples/openpose/openpose.bin --video examples/media/video.avi
+<pre><code class="language-bash">cd ~/catkin_ws
+catkin build
 </code></pre>
 
     </div>
@@ -689,9 +644,19 @@ make -j5
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tags/openpose/">openpose</a>
+  <a class="badge badge-light" href="/tags/pykdl/">pykdl</a>
+  
+  <a class="badge badge-light" href="/tags/kdl/">kdl</a>
+  
+  <a class="badge badge-light" href="/tags/ros/">ROS</a>
+  
+  <a class="badge badge-light" href="/tags/noetic/">noetic</a>
   
   <a class="badge badge-light" href="/tags/ubuntu/">ubuntu</a>
+  
+  <a class="badge badge-light" href="/tags/python3/">python3</a>
+  
+  <a class="badge badge-light" href="/tags/python/">python</a>
   
 </div>
 
@@ -825,6 +790,8 @@ make -j5
       <ul>
         
         <li><a href="/post/pykdl-kinetic/">Installing pykdl_utils on ROS kinetic, Ubuntu 16.04</a></li>
+        
+        <li><a href="/post/openpose/">Installing openpose on Ubuntu 20.04</a></li>
         
       </ul>
     </div>
